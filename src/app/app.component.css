@@ -1,0 +1,59 @@
+header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+    
+}
+
+nav a{
+    color: #cb6525;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-decoration: none;
+}
+   
+
+
+    nav button{
+        left:50%
+    }
+
+
+
+footer{
+  
+    
+    width: 100%;
+    background-color: #efe9e9ef;
+    color: white;
+    
+}
+footer h2{
+    font-weight: bold;
+    font-size: 0,5em;
+}
+
+footer p{
+    color: rgba(245, 246, 247, 0.607);
+}
+
+#filterShop{
+    background-color: #cb65255d;
+    border-radius: 5%;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 576px) {
+
+    nav a{
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2em;
+        
+    }
+    
+}
