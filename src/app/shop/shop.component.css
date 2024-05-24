@@ -1,0 +1,63 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-gap: 20px; 
+    justify-content: center;
+    align-items: center;
+  }
+  img{
+   width: 380px;
+   height: 220px;
+   }
+
+   ul{
+    margin-left: 5%;
+   }
+   a{
+    text-decoration: none;
+    color: rgb(56, 16, 16);
+    
+  
+   }
+   li{
+    list-style: none;
+   }
+   
+  #titleShop{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 3%;
+    background-image: url(/assets/images/accueil2-mod.jpg);
+    background-size: cover;
+    opacity: 70%;
+    margin-bottom: 2%;
+
+  }
+  #titleShop h1{
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 5em;
+  }
+
+h5{
+    font-weight: bold;
+    color: rgb(31, 84, 231);
+    
+}
+
+#filterShop{
+    border-right:1px solid rgba(0, 0, 0, 0.13) ; ;
+}
+aside button{
+   left: 50%;
+   color: white;
+   background-color: blue;
+   align-items: center;
+}
+
+
+  @media screen and (max-width: 576px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+  }
