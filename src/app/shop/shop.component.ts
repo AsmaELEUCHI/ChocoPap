@@ -2,6 +2,7 @@ import { Component, OnInit,Input,Output, EventEmitter} from '@angular/core';
 import { DataService } from '../data.service';
 import { log } from 'console';
 
+
 @Component({
   selector: 'app-shop',
   templateUrl: './shop.component.html',
@@ -46,9 +47,20 @@ export class ShopComponent implements OnInit {
       this.titles = this.liste.map(product => product.title);
       this.applyFilters();
     });
+   
+
+    /*Synchroniser le panier avec les données stockes localement dans le navigateur   */
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+      this.cart = JSON.parse(storedCart);
+      this.cartCount = this.cart.reduce((total, item) => total + item.quantity, 0);
+      this.cartCountChanged.emit(this.cartCount);
+      this.cartChanged.emit(this.cart);
     }
 
-    //importer les prix min pour le filtre
+  }
+
+  //importer les prix min pour le filtre
   getminPrices() {
     this.minPrices = this.dataService.minPrices;
   }
@@ -116,5 +128,24 @@ export class ShopComponent implements OnInit {
         (this.selectedTitles.length === 0 || this.selectedTitles.includes(product.title))
       );
     });
+  }
+
+
+/* lier au click, un tableau cart se cree et rajoute la propriete quantité au item, 
+si le produit existe incrémenter la quantité*/
+  addToCart(product: any) {
+    const existingProduct = this.cart.find(item => item.title === product.title);
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      this.cart.push({ ...product, quantity: 1 });
+    }
+
+    // Emit events pour app.component et stocker les valeurs dans le stockage local
+    this.cartChanged.emit(this.cart);
+    this.cartCount = this.cart.reduce((total, item) => total + item.quantity, 0);
+    this.cartCountChanged.emit(this.cartCount);
+    localStorage.setItem('cart', JSON.stringify(this.cart));
+    localStorage.setItem('cartCount', this.cartCount.toString());
   }
 }

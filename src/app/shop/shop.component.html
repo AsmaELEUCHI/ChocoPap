@@ -67,33 +67,38 @@
               <!-- End Filter by note -->
         </div>
    <!--End of filter section-->
+
 <!--Start aside section-->
-<aside class="col-12 col-md-9 ">
-    <div >
-        <div class="container-fluid">
-            <ul class="grid-container ">
-              <li *ngFor="let product of filteredProducts" class="d-flex flex-column justify-content-center align-items-center">
-                <div >
-                  <img [src]="product.image" alt="{{ product.title }}" >
-                </div>
-                <div >
-                    <ul class="px-1">
-                    <li><a  href="#">{{ product.title }}</a></li>
-                    <li><a href="#">Prix : {{ product.price }}</a></li>
-                    <li><a href="">Note : {{ product.note }}</a></li>
-                    </ul>
-                    <div id="addButton" class="text-center">
-                        <button type="button"  class="btn btn-primary">Ajouter au panier</button>
+    <aside class="col-12 col-md-9 ">
+        <div >
+            <div class="container-fluid">
+                <ul class="grid-container ">
+                  <li *ngFor="let product of filteredProducts" class="d-flex flex-column justify-content-center align-items-center">
+                    <div >
+                      <img [src]="product.image" alt="{{ product.title }}" >
                     </div>
-                </div>
-              </li>
-            </ul>
+                    <div >
+                        <ul class="px-1">
+                        <li><a  href="#">{{ product.title }}</a></li>
+                        <li><a href="#">Prix : {{ product.price }}</a></li>
+                        <li><a href="">Note : {{ product.note }}</a></li>
+                        </ul>
+                        <div id="addButton" class="text-center">
+                            <button type="button"  class="btn btn-primary" (click)="addToCart(product)">Ajouter au panier</button>
+                        </div>
+                    </div>
+                  </li>
+                </ul>
+            </div>
+
         </div>
-
-    </div>
-    
-</aside>
-<!--End aside section-->
-
+        
+    </aside>
+    <!--End aside section-->
 </div>
 </section>
+<!--End of main content-->
+
+
+  
+
