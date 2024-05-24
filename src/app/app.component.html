@@ -1,3 +1,4 @@
+<!--Start header-->
 <header class="container-fluid">
   <section class="row "> 
     
@@ -20,9 +21,9 @@
                   </li>
                   <!--Start cart-->
                   <li class="nav-item px-4">
-                    <a href="#" class="nav-link align-items-center" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas"> 
+                    <a href="#" class="nav-link align-items-center"> 
                       <i class="fa-solid fa-cart-shopping fa-lg" style="color: #cb6525;"></i>
-                      <span style="color: #cb6525;"> ()</span>
+                      <span style="color: #cb6525;"> ({{ cartCount }})</span>
                     </a>
                   </li>
                   <!--End cart-->
@@ -33,37 +34,47 @@
   </section>
 </header>
 
-<router-outlet></router-outlet>
+
+
+<!--End header-->
+
+
+
+<router-outlet (activate)="onActivate($event)"></router-outlet>
+
+
+
+
 
 <!--Start Footer-->
 <footer class="bg-dark">
-  <div class="container">
-      <div class="row p-4">
-        <div class="col-12 col-lg-4">
-          <h1 class="h6 text-uppercase fw-bold mb-4">Choco Pap</h1>
-            <p >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, earum! Adipisci tempore cum necessitatibus illo dicta reprehenderit consequuntur perferendis asperiores!
-            </p>
-        </div>
-              
-        <div class="col-12 col-lg-4">
-          <h1 class=" h6 text-uppercase fw-bold mb-4">Contact </h1>
-          <p >
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, earum! Adipisci tempore cum necessitatibus illo dicta reprehenderit consequuntur perferendis asperiores!
-          </p>
-        </div>
-    
-        <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center">
-          <div class="form-group">
-            <a href="#"><i class="px-2 fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="px-2 fa-brands fa-square-twitter fa-2xl" style="color: #ffffff;"></i></a>
-            <a href="#"><i class="px-2 fa-brands fa-square-instagram fa-2xl" style="color: #ffffff;"></i></a>
-          </div>
-        </div>
-              
-                
-      </div> 
-  </div>      
+<div class="container">
+  <div class="row p-4">
+    <div class="col-12 col-lg-4">
+      <h1 class="h6 text-uppercase fw-bold mb-4">Choco Pap</h1>
+        <p >
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, earum! Adipisci tempore cum necessitatibus illo dicta reprehenderit consequuntur perferendis asperiores!
+        </p>
+    </div>
+          
+    <div class="col-12 col-lg-4">
+      <h1 class=" h6 text-uppercase fw-bold mb-4">Contact </h1>
+      <p >
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, earum! Adipisci tempore cum necessitatibus illo dicta reprehenderit consequuntur perferendis asperiores!
+      </p>
+    </div>
+
+    <div class="col-12 col-lg-4 d-flex justify-content-center align-items-center">
+      <div class="form-group">
+        <a href="#"><i class="px-2 fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="px-2 fa-brands fa-square-twitter fa-2xl" style="color: #ffffff;"></i></a>
+        <a href="#"><i class="px-2 fa-brands fa-square-instagram fa-2xl" style="color: #ffffff;"></i></a>
+      </div>
+    </div>
+          
+            
+  </div> 
+</div>      
 </footer>
 <!--End Footer-->
 
