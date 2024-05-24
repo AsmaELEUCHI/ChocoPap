@@ -52,5 +52,24 @@ export class AppComponent   {
     }
   }
 
-  
+  //permet d'incrementer la quantité dans Offcanvas et mettre à jour le panier 
+  increaseQuantity(index: number) {
+    this.cart[index].quantity += 1;
+    this.updateCartCount(this.cart.reduce((total, item) => total + item.quantity, 0));
+    this.updateCart(this.cart);
+  }
+//permet de decrementer la quantité dans Offcanvas et mettre à jour le panier 
+  decreaseQuantity(index: number) {
+    if (this.cart[index].quantity > 1) {
+      this.cart[index].quantity -= 1;
+    } else {
+      this.cart.splice(index, 1);
+      this.updateCartCount(this.cart.reduce((total, item) => total + item.quantity, 0));
+      this.updateCart(this.cart);
+    }
+  }
+// la somme des prix des articles 
+  getTotal() {
+    return this.cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  }
 }
