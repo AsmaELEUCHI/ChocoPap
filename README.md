@@ -1,27 +1,62 @@
-# ChocoPap
+# Choco-Pap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Choco-Pap est un projet de site e-commerce pour l'entreprise Choco-Pap, spécialisée dans la vente de chocolats. Le site permet aux clients de consulter les produits, de les filtrer selon différents critères et de gérer leur panier.
 
-## Development server
+## Description du Projet
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Choco-Pap est une application web front-end développée avec Angular Version 17.3.0
 
-## Code scaffolding
+## Fonctionnalités
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Page d'Accueil** : Page principale guidant l'utilisateur à la boutique
+- **Page Boutique** : Interface pour afficher et filtrer les produits en fonction des critères suivants :
+  - Catégorie
+  - Prix (minimum et maximum)
+  - Notes (minimum et maximum)
+- **Gestion du Panier** : Ajout de produits au panier et consultation des produits ajoutés.
 
-## Build
+## Technologies Utilisées
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- **Angular Version 17.3.0**
+- **Bootstrap version 5.3.3**
+- **HTML**
+- **CSS**
+- **TypeScript**
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Pour configurer le projet localement, suivez les étapes ci-dessous :
 
-## Running end-to-end tests
+1. **Clonez le Dépôt** :
+   Ouvrez votre terminal et exécutez la commande suivante pour cloner le dépôt depuis GitHub :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```powershell
+   git clone https://github.com/AsmaELEUCHI/ChocoPap.git
 
-## Further help
+   ## Accédez au Dossier du Projet
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```
+
+2. **Accédez au Dossier du Projet** :
+
+   Changez de répertoire pour accéder au dossier du projet :
+
+   ```powershell
+   cd ChocoPap
+
+   ```
+
+3. **Installez les Dépendances** :
+
+   ```powershell
+   npm install
+
+   ```
+
+4. **Lancer le serveur de développement** :
+   ```powershell
+   ng serve
+   ```
+
+Une fois le serveur démarré, ouvrez votre navigateur et accédez à l'adresse suivante pour voir l'application en fonctionnement :
+http://localhost:4200/
