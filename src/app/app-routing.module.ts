@@ -5,6 +5,7 @@ import { ShopComponent } from './shop/shop.component';
 
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' }, // Chemin par défaut
   {path:"home",component:CarouselComponent },
   {path:"shop",component:ShopComponent},
   
