@@ -33,9 +33,7 @@ Pour configurer le projet localement, suivez les étapes ci-dessous :
    ```powershell
    git clone https://github.com/AsmaELEUCHI/ChocoPap.git
 
-   ## Accédez au Dossier du Projet
-
-   ```
+   
 
 2. **Accédez au Dossier du Projet** :
 
